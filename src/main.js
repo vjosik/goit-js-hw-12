@@ -8,7 +8,7 @@ import {
   hideLoadMoreButton,
   showLoader,
   showLoadMoreButton,
-} from './js/render-functions'; // Додано всі необхідні імпорти
+} from './js/render-functions';
 
 let currentPage = 1;
 let currentQuery = '';
@@ -52,7 +52,7 @@ form.addEventListener('submit', async event => {
     iziToast.error({
       message: 'Something went wrong. Try again!',
     });
-    hideLoadMoreButton(); // Сховати кнопку у разі помилки
+    hideLoadMoreButton(); 
   } finally {
     hideLoader();
   }
@@ -80,7 +80,7 @@ loadMoreBtn.addEventListener('click', async () => {
       showLoadMoreButton();
     }
 
-    // Плавний скрол тільки якщо картка існує
+    
     const card = document.querySelector('.gallery-item');
     if (card) {
       const cardHeight = card.getBoundingClientRect().height;
@@ -93,7 +93,7 @@ loadMoreBtn.addEventListener('click', async () => {
     iziToast.error({
       message: 'Something went wrong. Try again!',
     });
-    hideLoadMoreButton(); // Сховати кнопку у разі помилки
+    hideLoadMoreButton(); 
   } finally {
     hideLoader();
   }
