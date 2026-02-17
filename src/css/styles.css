@@ -8,11 +8,178 @@
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.form {
+  margin-top: 20px;
+}
+
+.form-input {
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  min-width: 272px;
+  min-height: 36px;
+}
+
+.form-btn {
+  background-color: #4e75ff;
+  padding: 8px 16px;
+  min-height: 40px;
+  color: #fff;
+  border-radius: 4px;
+  border-color: transparent;
+}
+
+.form-input:hover {
+  border-color: #000000;
+}
+
+.form-input:focus {
+  border-color: #4e75ff;
+  outline: 0;
+}
+
+.form-btn:hover,
+.form-btn:active {
+  background-color: #6c8cff;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  margin-top: 20px;
+}
+
+.gallery-item {
+  width: 360px;
+  height: 200px;
+  border: 1px solid #808080;
+}
+
+.gallery-image {
+  width: 100%;
+  object-fit: cover;
+  max-height: 152px;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.info-title {
+  font-family: Oxygen;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 4%;
+}
+.info-value {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+
+  line-height: 24px;
+  letter-spacing: 4%;
+}
+
+.hidden {
+  display: none;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.loader-container p {
+  margin-top: 10px;
+  color: #4e75ff;
+  font-weight: 500;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(0deg, rgba(78, 117, 255, 0.2) 33%, #4e75ff 100%);
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Стилі для повідомлень iziToast */
+.iziToast {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-load {
+  max-width: 450px;
+  padding: 10px 20px;
+  background-color: #4e75ff;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid rgba(78, 117, 255, 0.2);
+  margin: 20px auto;
+  transition: ease 200ms;
+}
+.btn-load:hover {
+  color: #4e75ff;
+  background-color: #fff;
+  border: 1px solid rgba(1, 56, 255, 0.616);
+}
